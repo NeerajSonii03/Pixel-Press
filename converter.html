@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pixel Press — converting</title>
+  <link rel="stylesheet" href="converter.css" />
+</head>
+<body>
+  <main>
+    <div class="mark" aria-hidden="true"></div>
+    <h1>Building your PDF</h1>
+    <p id="subtitle" class="sub">Fetching full-resolution images and embedding them at native size.</p>
+    <div class="bar" aria-hidden="true"><div id="fill"></div></div>
+    <p id="status" class="status">Starting…</p>
+    <p id="detail" class="detail"></p>
+  </main>
+  <script src="lib/jspdf.umd.min.js"></script>
+  <script src="pdf-core.js"></script>
+  <script src="converter.js"></script>
+</body>
+</html>

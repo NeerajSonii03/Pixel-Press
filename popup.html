@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pixel Press</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="mark" aria-hidden="true"></div>
+      <div>
+        <h1>Pixel Press</h1>
+        <p class="tag">Full-resolution page → PDF</p>
+      </div>
+    </div>
+    <div class="actions">
+      <button id="scanBtn" class="primary">Scan</button>
+      <button id="deepScanBtn" class="ghost" title="Scroll the page to load lazy images">Deep scan</button>
+    </div>
+  </header>
+
+  <div id="controls" class="hidden">
+    <div class="row">
+      <label class="check">
+        <input type="checkbox" id="selectAll" checked />
+        Select all (<span id="count">0</span>)
+      </label>
+      <label class="minsize">
+        Hide under
+        <select id="minSize">
+          <option value="0">Any</option>
+          <option value="50">50px</option>
+          <option value="100">100px</option>
+          <option value="300">300px</option>
+        </select>
+      </label>
+    </div>
+    <div class="row layout-row">
+      <span class="layout-label">PDF pages</span>
+      <div class="seg" role="group" aria-label="PDF page size">
+        <label class="seg-opt">
+          <input type="radio" name="layout" value="original" checked />
+          <span>Original pixels</span>
+        </label>
+        <label class="seg-opt">
+          <input type="radio" name="layout" value="a4" />
+          <span>Fit A4</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div id="status" class="status"></div>
+  <div id="grid" class="grid"></div>
+
+  <footer class="hidden" id="footer">
+    <span id="selectedCount">0 selected</span>
+    <button id="convertBtn" class="primary" disabled>Convert to PDF</button>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
